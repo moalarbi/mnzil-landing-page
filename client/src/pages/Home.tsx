@@ -1,25 +1,37 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import CompaniesSection from '@/components/CompaniesSection';
+import DifferenceSection from '@/components/DifferenceSection';
+import Footer from '@/components/Footer';
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home Page - Landing Page
+ * Design: Modern landing page with animated sections
+ * - Fixed header with navigation
+ * - Hero section with wave animation
+ * - Companies showcase
+ * - Features/Differences section
+ * - Footer with links and social
+ * 
+ * RTL Support: All sections are optimized for right-to-left layout
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="w-full min-h-screen bg-white">
+      {/* Header */}
+      <Header />
+
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Companies Section */}
+      <CompaniesSection />
+
+      {/* Difference Section */}
+      <DifferenceSection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
