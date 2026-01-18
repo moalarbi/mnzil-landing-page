@@ -38,7 +38,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen pt-20 overflow-hidden">
+    <section className="relative w-full min-h-screen pt-16 md:pt-20 overflow-hidden">
       {/* Animated Wave Background */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -93,17 +93,17 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <motion.div
-        className="relative z-10 container flex flex-col items-center justify-center min-h-screen gap-8"
+        className="relative z-10 container flex flex-col items-center justify-center min-h-screen gap-4 md:gap-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Main Headline */}
-        <motion.div variants={itemVariants} className="text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+        <motion.div variants={itemVariants} className="text-center max-w-3xl px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 leading-tight">
             حل واحد، يغطي كل احتياجات عاملينك
           </h1>
-          <p className="text-lg md:text-xl text-white/90 font-light">
+          <p className="text-sm sm:text-base md:text-xl text-white/90 font-light">
             منصة شاملة لإدارة السكن والنقل والتموين والتأمين
           </p>
         </motion.div>
@@ -111,7 +111,7 @@ export default function HeroSection() {
         {/* CTA Button */}
         <motion.button
           variants={itemVariants}
-          className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full text-lg transition-all duration-300 btn-hover shadow-lg"
+          className="px-6 md:px-8 py-3 md:py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full text-base md:text-lg transition-all duration-300 btn-hover shadow-lg"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -121,22 +121,22 @@ export default function HeroSection() {
         {/* Image Gallery */}
         <motion.div
           variants={itemVariants}
-          className="w-full max-w-5xl mt-8"
+          className="w-full max-w-5xl mt-6 md:mt-8 px-4"
         >
           <div className="relative">
             {/* Gallery Container */}
-            <div className="bg-gradient-to-b from-blue-500/20 to-transparent rounded-3xl p-8 border-2 border-blue-400 border-dashed">
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="bg-gradient-to-b from-blue-500/20 to-transparent rounded-2xl md:rounded-3xl p-4 md:p-8 border-2 border-blue-400 border-dashed">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4">
                 {images.map((img, index) => (
                   <motion.div
                     key={img.id}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-                    className="aspect-square rounded-2xl overflow-hidden border-4 border-blue-400 border-dashed bg-gray-300 flex items-center justify-center"
+                    className="aspect-square rounded-lg md:rounded-2xl overflow-hidden border-2 md:border-4 border-blue-400 border-dashed bg-gray-300 flex items-center justify-center"
                   >
                     <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center">
-                      <span className="text-white font-bold text-center px-4">
+                      <span className="text-white font-bold text-center px-2 md:px-4 text-xs md:text-sm">
                         {img.placeholder}
                       </span>
                     </div>
@@ -146,12 +146,12 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative dots around gallery */}
-            <div className="absolute -top-4 right-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
-            <div className="absolute -top-4 left-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
-            <div className="absolute -bottom-4 right-1/3 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
-            <div className="absolute -bottom-4 left-1/3 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
-            <div className="absolute top-1/2 -right-4 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
-            <div className="absolute top-1/2 -left-4 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
+            <div className="absolute -top-2 md:-top-4 right-1/4 w-2 md:w-3 h-2 md:h-3 bg-red-500 rounded-full border border-md:border-2 border-white" />
+            <div className="absolute -top-2 md:-top-4 left-1/4 w-2 md:w-3 h-2 md:h-3 bg-red-500 rounded-full border border-md:border-2 border-white" />
+            <div className="absolute -bottom-2 md:-bottom-4 right-1/3 w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full border border-md:border-2 border-white" />
+            <div className="absolute -bottom-2 md:-bottom-4 left-1/3 w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full border border-md:border-2 border-white" />
+            <div className="absolute top-1/2 -right-2 md:-right-4 w-2 md:w-3 h-2 md:h-3 bg-red-500 rounded-full border border-md:border-2 border-white" />
+            <div className="absolute top-1/2 -left-2 md:-left-4 w-2 md:w-3 h-2 md:h-3 bg-red-500 rounded-full border border-md:border-2 border-white" />
           </div>
         </motion.div>
       </motion.div>
