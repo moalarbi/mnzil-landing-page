@@ -43,7 +43,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
                 م
               </div>
-              <span className="text-2xl font-bold">منزل</span>
+              <span className="text-2xl font-bold">أداء العمل</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               منصة شاملة لإدارة احتياجات العمال والموظفين بكفاءة عالية
@@ -113,7 +113,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            © 2024 منزل - جميع الحقوق محفوظة
+            © 2024 أداء العمل - جميع الحقوق محفوظة
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">

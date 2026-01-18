@@ -25,7 +25,7 @@ export default function Header() {
           <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-lg">
             م
           </div>
-          <span className="text-xl font-bold text-gray-900 hidden sm:inline">منزل</span>
+          <span className="text-xl font-bold text-gray-900 hidden sm:inline">أداء العمل</span>
         </div>
 
         {/* Desktop Menu */}

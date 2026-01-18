@@ -62,7 +62,7 @@ export default function CompaniesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             شركات رائدة من كل القطاعات...
             <br />
-            <span className="text-blue-600">تثق في منزل</span>
+            <span className="text-blue-600">تثق في أداء العمل</span>
           </h2>
         </motion.div>
 
